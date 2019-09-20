@@ -13,5 +13,8 @@
     "target": "es2017",
     "lib": ["es2017"]
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": [
+    "**/*.test.ts"
+  ]
 }

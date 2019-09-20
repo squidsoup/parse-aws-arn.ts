@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "prepaare": "npm run build"
+    "prepare": "rm -rf dist && npm run build"
   },
   "repository": {
     "type": "git",
