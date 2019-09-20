@@ -1,0 +1,28 @@
+{
+  "name": "@unbounce/parse-aws-arn",
+  "version": "1.0.0",
+  "description": "Parse AWS ARNs into objects",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prepaare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unbounce/parse-aws-arn.ts"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "author": "Unbounce",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.3"
+  }
+}
