@@ -5,9 +5,10 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest",
     "build": "tsc",
-    "prepare": "rm -rf dist && npm run build"
+    "lint:format": "prettier --check 'src/**/*.ts' 'src/**/*.tsx'",
+    "prepare": "rm -rf dist && npm run build",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
