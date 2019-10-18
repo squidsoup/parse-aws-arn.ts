@@ -2,7 +2,15 @@
 
 [![CircleCI](https://circleci.com/gh/unbounce/parse-aws-arn.ts/tree/master.svg?style=svg)](https://circleci.com/gh/unbounce/parse-aws-arn.ts/tree/master)
 
-Parse AWS ARNs into Objects.
+Parse AWS ARNs into Objects (with TypeScript).
+
+# Install
+
+See https://www.npmjs.com/package/@unbounce/parse-aws-arn
+
+```
+npm install --save @unbounce/parse-aws-arn
+```
 
 # Usage
 
@@ -20,3 +28,9 @@ console.log(arn)
 ```
 
 Object keys match the format defined in [Amazon Resource Names (ARNs)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html).
+
+# FAQ
+
+> Why create another AWS ARN Parser?
+
+Because we like types.

@@ -4,6 +4,10 @@
   "description": "Parse AWS ARNs into objects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "keywords": [
+    "typescript",
+    "aws"
+  ],
   "scripts": {
     "build": "tsc",
     "lint:format": "prettier --check 'src/**/*.ts' 'src/**/*.tsx'",
