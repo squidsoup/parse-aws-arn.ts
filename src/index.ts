@@ -3,8 +3,9 @@ export interface Arn {
   service: string;
   region?: string;
   accountId?: string;
+  resource: string;
+  resourceId?: string;
   resourceType?: string;
-  resourceId: string;
 }
 
 function coerceToUndefined(s: string): string | undefined {
@@ -34,17 +35,13 @@ function parseResourceIdAndType(resourceIdAndType: string[]) {
   }
   // assume to have format: arn:partition:service:region:account-id:resource-type:resource-id
   else if (resourceIdAndType.length > 1) {
-    const [resourceType, resourceId] = resourceIdAndType;
+    const [resourceType, ...resourceIds] = resourceIdAndType;
     return {
-      resourceId,
+      // re-join by : incase there are additional characters
+      resourceId: resourceIds.join(":"),
       resourceType
     };
   }
-
-  return {
-    resourceId: resourceIdAndType[0],
-    resourceType: undefined
-  };
 }
 
 /**
@@ -71,6 +68,7 @@ export function parseArn(arn: string): Arn {
     service,
     region: coerceToUndefined(region),
     accountId: coerceToUndefined(accountId),
+    resource: resourceIdAndType.join(":"),
     ...parseResourceIdAndType(resourceIdAndType)
   };
 }

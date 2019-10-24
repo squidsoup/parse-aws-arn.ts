@@ -23,11 +23,16 @@ console.log(arn)
   service: 'lambda',
   region: 'us-west-2',
   accountId: '123456',
+  resource: 'function:magic-lambda-fn',
   resourceId: 'magic-lambda-fn',
   resourceType: 'function' }
 ```
 
-Object keys match the format defined in [Amazon Resource Names (ARNs)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html).
+Object keys match the format defined in [Amazon Resource Names
+(ARNs)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html).
+Be aware that not all arns match the scheme. The `resourceId` and `resourceType`
+*may* be undefined if we're unable to accurately guess the pattern. For example,
+S3 Objects have neither a resourceId or a resource type.
 
 # FAQ
 
