@@ -12,7 +12,7 @@ describe("parseArn", () => {
     expect(parseArn(arn)).toEqual({
       partition: "aws",
       resource: "hello-world",
-      service: "s3"
+      service: "s3",
     });
   });
 
@@ -26,7 +26,7 @@ describe("parseArn", () => {
       resource: "user/division_abc/subdivision_xyz/Bob",
       resourceType: "user",
       resourceId: "division_abc/subdivision_xyz/Bob",
-      service: "iam"
+      service: "iam",
     });
   });
 
@@ -41,7 +41,7 @@ describe("parseArn", () => {
       resource: "function:${FunctionName}",
       resourceType: "function",
       resourceId: "${FunctionName}",
-      service: "lambda"
+      service: "lambda",
     });
   });
 
@@ -55,7 +55,7 @@ describe("parseArn", () => {
       resource: "stackset/${StackSetName}:${Id}",
       resourceType: "stackset/${StackSetName}",
       resourceId: "${Id}",
-      service: "cloudformation"
+      service: "cloudformation",
     });
   });
 
@@ -70,7 +70,7 @@ describe("parseArn", () => {
       resource: "log-group:${LogGroupName}:log-stream:${LogStreamName}",
       resourceType: "log-group",
       resourceId: "${LogGroupName}:log-stream:${LogStreamName}",
-      service: "logs"
+      service: "logs",
     });
   });
 });

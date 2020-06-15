@@ -30,7 +30,7 @@ function parseResourceIdAndType(resourceIdAndType: string[]) {
     const [resourceType, resourceId] = splitAt(resourceIdAndType[0], "/");
     return {
       resourceId,
-      resourceType
+      resourceType,
     };
   }
   // assume to have format: arn:partition:service:region:account-id:resource-type:resource-id
@@ -39,7 +39,7 @@ function parseResourceIdAndType(resourceIdAndType: string[]) {
     return {
       // re-join by : incase there are additional characters
       resourceId: resourceIds.join(":"),
-      resourceType
+      resourceType,
     };
   }
 }
@@ -69,7 +69,7 @@ export function parseArn(arn: string): Arn {
     region: coerceToUndefined(region),
     accountId: coerceToUndefined(accountId),
     resource: resourceIdAndType.join(":"),
-    ...parseResourceIdAndType(resourceIdAndType)
+    ...parseResourceIdAndType(resourceIdAndType),
   };
 }
 

@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "lint:format": "prettier --check 'src/**/*.ts' 'src/**/*.tsx'",
+    "lint:format": "prettier --check 'src'",
     "prepare": "rm -rf dist && npm run build",
     "test": "jest"
   },
