@@ -1,7 +1,5 @@
 # parse-aws-arn.ts 
 
-[![CircleCI](https://circleci.com/gh/unbounce/parse-aws-arn.ts/tree/master.svg?style=svg)](https://circleci.com/gh/unbounce/parse-aws-arn.ts/tree/master)
-
 Parse AWS ARNs into Objects (with TypeScript).
 
 # Install
