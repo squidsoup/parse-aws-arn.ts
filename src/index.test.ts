@@ -73,4 +73,19 @@ describe("parseArn", () => {
       service: "logs",
     });
   });
+
+  it("parses a DynamoDB Table correctly", () => {
+    const arn =
+      "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}";
+
+    expect(parseArn(arn)).toEqual({
+      accountId: "${Account}",
+      partition: "${Partition}",
+      region: "${Region}",
+      resource: "table/${TableName}",
+      resourceType: "table",
+      resourceId: "${TableName}",
+      service: "dynamodb",
+    });
+  });
 });
