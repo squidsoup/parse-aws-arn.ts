@@ -1,6 +1,6 @@
 {
   "name": "@unbounce/parse-aws-arn",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Parse AWS ARNs into objects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
