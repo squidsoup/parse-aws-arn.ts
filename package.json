@@ -19,7 +19,8 @@
     "url": "git+https://github.com/unbounce/parse-aws-arn.ts"
   },
   "files": [
-    "dist/**/*"
+    "dist/**/*",
+    "src/**/*"
   ],
   "author": "Unbounce",
   "license": "MIT",
